@@ -1,0 +1,13 @@
+development: &defaults
+  adapter: mysql
+  database: caliari
+  username: root
+  password: 1234
+  host: localhost
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
