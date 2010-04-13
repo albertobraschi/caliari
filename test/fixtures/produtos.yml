@@ -1,0 +1,13 @@
+one:
+  titulo: MyString
+  meta_title: MyString
+  meta_description: MyText
+  meta_keyword: MyText
+  descricao: MyText
+
+two:
+  titulo: MyString
+  meta_title: MyString
+  meta_description: MyText
+  meta_keyword: MyText
+  descricao: MyText

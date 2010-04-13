@@ -1,0 +1,82 @@
+<% form_for [:admin,@produto] do |f| %>
+  <%= f.error_messages %>
+  <br style="clear:both" />
+<p>
+<!-- %= recaptcha_tags :ajax => true % -->
+</p>
+  <p>
+    <%= f.label :meta_title %><br />
+    <%= f.text_field :meta_title %>
+  </p>
+  <p>
+    <%= f.label :meta_description %><br />
+    <%= f.text_area :meta_description, :size => "50x5" %>
+  </p>
+  <p>
+    <%= f.label :meta_keyword %><br />
+    <%= f.text_area :meta_keyword, :size => "50x5" %>
+  </p>
+  <p>
+    <%= f.label :titulo %> <span class="required">*</span><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :descricao %> <span class="required">*</span><br />
+    <%= f.text_area :descricao, :size => "50x10" %>
+  </p>
+  <p>
+    <%= f.label :preco %> <span class="required">*</span><br />
+    <%= f.text_field :preco, :value => number_with_precision(@produto.preco, :precision => 2) %>
+  </p>
+  <p>
+    <%= f.label :preco_promocional %><br />
+    <%= f.text_field :preco_promocional, :value => number_with_precision(@produto.preco_promocional, :precision => 2)  %>
+  </p>
+  <p>
+    <%= f.check_box :status %>
+    <%= f.label :status %> <br />
+  </p>
+    <p>
+    <%= f.label :categoria_id, "Categoria do Produto" %><br />
+    <ul id="tree" class="filetree">
+    <% for categoria in Categoria.roots %>
+      <li>
+        <%= check_box_tag "produto[categoria_ids][]", categoria.id, @produto.categorias.include?(categoria) %>
+        <%= categoria.nome %>
+        <% if categoria.children? %>
+          <ul>
+            <% for categoria in categoria.children %>
+              <li>
+                <%= check_box_tag "produto[categoria_ids][]", categoria.id, @produto.categorias.include?(categoria) %>
+                <%= categoria.nome %>
+                <% if categoria.children? %>
+                  <ul>
+                    <% for categoria in categoria.children %>
+                      <li>
+                        <%= check_box_tag "produto[categoria_ids][]", categoria.id, @produto.categorias.include?(categoria) %>
+                        <%= categoria.nome %>
+                        <% if categoria.children? %>
+                          <ul>
+                            <% for categoria in categoria.children %>
+                              <li>
+                                <%= check_box_tag "produto[categoria_ids][]", categoria.id, @produto.categorias.include?(categoria) %>
+                                <%= categoria.nome %>
+                              </li>
+                            <% end %>
+                            </ul>
+                        <% end %>
+                      </li>
+                    <% end %>
+                    </ul>
+                <% end %>
+              </li>
+            <% end %>
+            </ul>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+  </p>
+  <p><%= f.submit "Salvar" %></p>
+<% end %>
+

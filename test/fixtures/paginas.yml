@@ -1,0 +1,15 @@
+one:
+  titulo: MyString
+  permalink: MyString
+  conteudo: MyText
+  meta_description: MyText
+  meta_title: MyString
+  meta_keyword: MyText
+
+two:
+  titulo: MyString
+  permalink: MyString
+  conteudo: MyText
+  meta_description: MyText
+  meta_title: MyString
+  meta_keyword: MyText

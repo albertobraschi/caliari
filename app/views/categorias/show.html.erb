@@ -1,0 +1,22 @@
+<% title @categoria.nome %>
+<div class="listing-type-grid catalog-listing">
+  <ol class="grid-row">
+    <% for produto in @categoria.produtos %>
+      <li class="item">
+          <p class="product-image">
+              <%= link_to image_tag("demo/pthumb_monojato.gold.line.VH.jpg",:width=>"90"), produto_path(produto), :title=> produto.titulo, :rel=>"follow"  %>
+          </p>
+
+          <h3><%= link_to produto.titulo, produto_path(produto), :title=> produto.titulo, :rel=>"follow" %></h3>
+          <div class="price-box">
+              <span class="regular-price">
+                  <span class="price"><%= number_to_currency(produto.preco) %><br />
+                      ou 12 X de <%= number_to_currency(produto.preco/12) %></span>
+              </span>
+          </div>
+      </li>
+      <li></li>
+    <% end %>
+  </ol>
+</div>
+

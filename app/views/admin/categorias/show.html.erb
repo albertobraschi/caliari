@@ -1,0 +1,32 @@
+<% title "Categoria" %>
+
+<p>
+  <strong>Parent:</strong>
+  <%=h @categoria.parent_id %>
+</p>
+<p>
+  <strong>Proposed Parent:</strong>
+  <%=h @categoria.proposed_parent_id %>
+</p>
+<p>
+  <strong>Lft:</strong>
+  <%=h @categoria.lft %>
+</p>
+<p>
+  <strong>Rgt:</strong>
+  <%=h @categoria.rgt %>
+</p>
+<p>
+  <strong>Nome:</strong>
+  <%=h @categoria.nome %>
+</p>
+<p>
+  <strong>Permalink:</strong>
+  <%=h @categoria.permalink %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_categoria_path(@categoria) %> |
+  <%= link_to "Destroy", @categoria, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", categorias_path %>
+</p>

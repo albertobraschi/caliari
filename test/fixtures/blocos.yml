@@ -1,0 +1,9 @@
+one:
+  titulo: MyString
+  identificador: MyString
+  conteudo: MyText
+
+two:
+  titulo: MyString
+  identificador: MyString
+  conteudo: MyText

@@ -1,0 +1,21 @@
+<% title "Blocos" %>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Identificador</th>
+    <th>Conteudo</th>
+  </tr>
+  <% for bloco in @blocos %>
+    <tr>
+      <td><%=h bloco.titulo %></td>
+      <td><%=h bloco.identificador %></td>
+      <td><%=h bloco.conteudo %></td>
+      <td><%= link_to "Show", bloco %></td>
+      <td><%= link_to "Edit", edit_bloco_path(bloco) %></td>
+      <td><%= link_to "Destroy", bloco, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Bloco", new_bloco_path %></p>

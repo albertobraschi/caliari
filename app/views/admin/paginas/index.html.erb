@@ -1,0 +1,27 @@
+<% title "Paginas" %>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Permalink</th>
+    <th>Conteudo</th>
+    <th>Meta Description</th>
+    <th>Meta Title</th>
+    <th>Meta Keyword</th>
+  </tr>
+  <% for pagina in @paginas %>
+    <tr>
+      <td><%=h pagina.titulo %></td>
+      <td><%=h pagina.permalink %></td>
+      <td><%=h pagina.conteudo %></td>
+      <td><%=h pagina.meta_description %></td>
+      <td><%=h pagina.meta_title %></td>
+      <td><%=h pagina.meta_keyword %></td>
+      <td><%= link_to "Show", pagina %></td>
+      <td><%= link_to "Edit", edit_pagina_path(pagina) %></td>
+      <td><%= link_to "Destroy", pagina, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Pagina", new_pagina_path %></p>

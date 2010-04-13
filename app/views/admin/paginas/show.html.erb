@@ -1,0 +1,32 @@
+<% title "Pagina" %>
+
+<p>
+  <strong>Titulo:</strong>
+  <%=h @pagina.titulo %>
+</p>
+<p>
+  <strong>Permalink:</strong>
+  <%=h @pagina.permalink %>
+</p>
+<p>
+  <strong>Conteudo:</strong>
+  <%=h @pagina.conteudo %>
+</p>
+<p>
+  <strong>Meta Description:</strong>
+  <%=h @pagina.meta_description %>
+</p>
+<p>
+  <strong>Meta Title:</strong>
+  <%=h @pagina.meta_title %>
+</p>
+<p>
+  <strong>Meta Keyword:</strong>
+  <%=h @pagina.meta_keyword %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_pagina_path(@pagina) %> |
+  <%= link_to "Destroy", @pagina, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", paginas_path %>
+</p>

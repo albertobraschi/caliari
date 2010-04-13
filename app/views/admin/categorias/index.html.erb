@@ -1,0 +1,20 @@
+<% title "Categorias" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Permalink</th>
+  </tr>
+  <% for categoria in @categorias %>
+    <tr>
+      <td><%=h categoria.nome %></td>
+      <td><%=h categoria.permalink %></td>
+      <td><%= link_to "Show", categoria %></td>
+      <td><%= link_to "Edit", edit_categoria_path(categoria) %></td>
+      <td><%= link_to "Destroy", categoria, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Categoria", new_admin_categoria_path %></p>
+

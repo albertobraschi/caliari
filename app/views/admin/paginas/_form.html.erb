@@ -1,0 +1,28 @@
+<% form_for @pagina do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </p>
+  <p>
+    <%= f.label :conteudo %><br />
+    <%= f.text_area :conteudo %>
+  </p>
+  <p>
+    <%= f.label :meta_description %><br />
+    <%= f.text_area :meta_description %>
+  </p>
+  <p>
+    <%= f.label :meta_title %><br />
+    <%= f.text_field :meta_title %>
+  </p>
+  <p>
+    <%= f.label :meta_keyword %><br />
+    <%= f.text_area :meta_keyword %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

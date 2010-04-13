@@ -1,0 +1,12 @@
+<% title @produto.titulo %>
+
+<%= include_fancy_box %>
+
+
+<%= link_to_image "special.jpg", :title => "special image" %>
+<h1>
+  <%= @produto.titulo %>
+</h1>
+
+  <%= simple_format(@produto.descricao) %>
+

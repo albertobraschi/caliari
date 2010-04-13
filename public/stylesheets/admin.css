@@ -12,6 +12,12 @@ a {
   color: #0000FF;
 }
 
+.nav {width:100%;float:left;margin:0;padding:0;margin-bottom:20px;}
+.nav li {float:left;}
+.nav li a {padding:0 10px;}
+
+ul {list-style-type:none}
+
 .clear {
   clear: both;
   height: 0;
@@ -79,3 +85,4 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+

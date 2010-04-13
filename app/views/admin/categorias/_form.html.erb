@@ -1,0 +1,14 @@
+<% form_for [:admin,@categoria] do |f| %>
+  <%= f.error_messages %>
+  <%- unless @categoria.available_parents.empty? -%>
+    <p>
+		  <%= f.select :proposed_parent_id, @categoria.available_parents.map{|categoria| [padded_categoria_nome(categoria,2,"-"), categoria.id]}, {:include_blank => true} %>
+    </p>
+  <%- end -%>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p><%= f.submit "Salvar" %></p>
+<% end %>
+

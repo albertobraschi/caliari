@@ -1,0 +1,20 @@
+<% title "Produtos" %>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Status</th>
+  </tr>
+  <% for produto in @produtos %>
+    <tr>
+      <td><%=h produto.titulo %></td>
+      <td><%=h produto.status %></td>
+      <td><%= link_to "Show", [:admin,produto] %></td>
+      <td><%= link_to "Edit", edit_admin_produto_path(produto) %></td>
+      <td><%= link_to "Destroy", [:admin,produto], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Produto", new_admin_produto_path %></p>
+

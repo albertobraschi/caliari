@@ -1,0 +1,20 @@
+<% title "Bloco" %>
+
+<p>
+  <strong>Titulo:</strong>
+  <%=h @bloco.titulo %>
+</p>
+<p>
+  <strong>Identificador:</strong>
+  <%=h @bloco.identificador %>
+</p>
+<p>
+  <strong>Conteudo:</strong>
+  <%=h @bloco.conteudo %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_bloco_path(@bloco) %> |
+  <%= link_to "Destroy", @bloco, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", blocos_path %>
+</p>

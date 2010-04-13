@@ -1,0 +1,27 @@
+<% title "Admin / Produto" %>
+
+<h1>
+  <%=h @produto.titulo %>
+</h1>
+<p>
+  <strong>Meta Title:</strong>
+  <%=h @produto.meta_title %>
+</p>
+<p>
+  <strong>Meta Description:</strong>
+  <%=h @produto.meta_description %>
+</p>
+<p>
+  <strong>Meta Keyword:</strong>
+  <%=h @produto.meta_keyword %>
+</p>
+
+
+  <%= simple_format(@produto.descricao) %>
+
+
+
+<p>
+  <%= link_to "Voltar", admin_produtos_path %>
+</p>
+

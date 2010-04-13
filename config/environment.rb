@@ -32,4 +32,6 @@ ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(
   :date_time24  => "%d/%m/%Y %H:%M",
   :short_date => "%d-%m-%Y"
 )
+ENV['RECAPTCHA_PRIVATE_KEY'] = '6LfCcgwAAAAAACaPR7W_fSyMn4nBZFpiFuxJO_kM'
+ENV['RECAPTCHA_PUBLIC_KEY'] = '6LfCcgwAAAAAAEt0tB6-VzQ-hpAM68gKRF70fqy6'
 
